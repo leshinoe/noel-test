@@ -407,7 +407,8 @@
         declared. An assignment to an undeclared variable throws an exception.</p>
 
       <p>We can turn strict mode on by typing the following statement as the first line in a JavaScript file or inside a
-        <code>&lt;script&gt;</code> element:</p>
+        <code>&lt;script&gt;</code> element:
+      </p>
 
       <pre>'use strict';</pre>
 
@@ -452,7 +453,8 @@
       </ol>
 
       <p>The name in a <strong><em>method slot</em></strong> denotes a <em>JS function</em> (better called
-        <em><em>method</em></em>), and its value is a <em>JS function definition expression</em>.</p>
+        <em><em>method</em></em>), and its value is a <em>JS function definition expression</em>.
+      </p>
 
       <p>Object properties can be accessed in two ways:</p>
 
@@ -545,7 +547,8 @@
 
       <p>The contents of an array <code>a</code> are processed with the help of a standard <em>for</em> loop with a
         counter variable counting from the first array index 0 to the last array index, which is
-        <code>a.length-1</code>:</p>
+        <code>a.length-1</code>:
+      </p>
 
       <pre>for (i=0; i &lt; a.length; i++) { ...}</pre>
 
@@ -553,7 +556,8 @@
         an array. We can test, if a variable <code>a</code> represents an array with <code>Array.isArray( a)</code>.</p>
 
       <p>For <strong><em>adding</em></strong> a new element to an array, we append it to the array using the
-        <code>push</code> operation as in:</p>
+        <code>push</code> operation as in:
+      </p>
 
       <pre>a.<strong>push</strong>( newElement);</pre>
 
@@ -570,7 +574,8 @@
 
       <p>For <strong><em>looping</em></strong> over an array <code>a</code>, we have two options: either use a
         <code>for</code> loop, or the array looping method <code>forEach</code>. In any case, we can use a
-        <code>for</code> loop:</p>
+        <code>for</code> loop:
+      </p>
 
       <pre>var i=0;
 for (i=0; i &lt; a.length; i++) {
@@ -605,7 +610,8 @@ for (i=0; i &lt; a.length; i++) {
 }</pre>
 
       <p>A map is processed by looping over all keys of the map with the help of the pre-defined function
-        <code>Object.keys(m)</code>, which returns an array of all keys of a map <code>m</code>. For instance,</p>
+        <code>Object.keys(m)</code>, which returns an array of all keys of a map <code>m</code>. For instance,
+      </p>
 
       <pre>var i=0, key="", keys=[];
 keys = <strong>Object.keys</strong>( myTranslation);
@@ -670,15 +676,18 @@ for (i=0; i &lt; keys.length; i++) {
         <li>
           <p><em><strong>array lists</strong></em>, such as <code>["one","two","three"]</code>, which are special JS
             objects called 'arrays', but since they are dynamic, they are rather <em>array lists</em> as defined in the
-            <em>Java</em> programming language.</p>
+            <em>Java</em> programming language.
+          </p>
         </li>
         <li>
           <p><em><strong>records</strong></em>, which are special JS objects, such as
-            <code>{firstName: "Tom", lastName: "Smith"}</code>, as discussed above,</p>
+            <code>{firstName: "Tom", lastName: "Smith"}</code>, as discussed above,
+          </p>
         </li>
         <li>
           <p><em><strong>maps</strong></em>, which are also special JS objects, such as
-            <code>{"one":1,"two":2,"three":3}</code>, as discussed above,</p>
+            <code>{"one":1,"two":2,"three":3}</code>, as discussed above,
+          </p>
         </li>
         <li>
           <p><strong><em>entity tables</em></strong>, like for instance the Table 1 shown below, which are special maps
@@ -717,7 +726,8 @@ for (i=0; i &lt; keys.length; i++) {
         <code>{firstName:"Tom", lastName:"Smith"}</code> is a record because <code>firstName</code> and
         <code>lastName</code> are intended to denote properties or fields, while
         <code>{"one":1, "two":2, "three":3}</code> is a map because <code>"one"</code> and <code>"two"</code> are not
-        intended to denote properties/fields, but are just arbitrary string values used as keys for a map.</p>
+        intended to denote properties/fields, but are just arbitrary string values used as keys for a map.
+      </p>
 
       <p>Making such conceptual distinctions helps to better understand the options offered by JavaScript.</p>
     </section>
@@ -728,7 +738,8 @@ for (i=0; i &lt; keys.length; i++) {
       <p>In JavaScript, methods are called "functions", no matter if they return a value or not. As shown in Figure 1
         below, JS functions are special JS objects, having an optional <code>name</code> property and a
         <code>length</code> property providing their number of parameters. If a variable <code>v</code> references a JS
-        function can be tested with</p>
+        function can be tested with
+      </p>
 
       <pre>if (typeof( v) === "function") {...}</pre>
 
@@ -744,7 +755,8 @@ for (i=0; i &lt; keys.length; i++) {
       <p>where <code>theNameOfMyF</code> is optional. When it is omitted, the function is
         <strong><em>anonymous</em></strong>. In any case, functions are invoked via a variable that references the
         function. In the above case, this means that the function is invoked with <code>myF()</code>, and not with
-        <code>theNameOfMyF()</code>.</p>
+        <code>theNameOfMyF()</code>.
+      </p>
 
       <p>Anonymous function expressions are called <em>lambda expressions</em> (or shorter <em>lambdas</em>) in other
         programming languages.</p>
@@ -754,7 +766,8 @@ for (i=0; i &lt; keys.length; i++) {
         <code>sort</code> for sorting the elements of an array list. Such a comparison function must return a negative
         number if its first argument is considered smaller than its second argument, it must return 0 if both arguments
         are of the same rank, and it must return a positive number if the second argument is considered smaller than the
-        first one. In the following example, we sort a list of lists of 2 numbers in lexicographic order:</p>
+        first one. In the following example, we sort a list of lists of 2 numbers in lexicographic order:
+      </p>
 
       <pre>var list = [[1,2],[1,3],[1,1],[2,1]]; 
 list.sort( function (x,y) { 
@@ -773,7 +786,8 @@ list.sort( function (x,y) {
                    }</pre>
 
       <p>that is, it creates both a function with name <code>theNameOfMyF</code> and a variable
-        <code>theNameOfMyF</code> referencing this function.</p>
+        <code>theNameOfMyF</code> referencing this function.
+      </p>
 
       <p>JS functions can have <strong><em>inner functions</em></strong>. The <strong><em>closure</em></strong>
         mechanism allows a JS function using variables (except <code>this</code>) from its outer scope, and a function
@@ -839,7 +853,8 @@ numbers.<strong>forEach</strong>( function (n) {
             method</strong></span> (<code>Function.prototype.bind</code>). This
         allows creating a shortcut for invoking a method, as in <code>var querySel =
       document.querySelector.bind( document)</code>, which allows to use <code>querySel</code> instead of
-        <code>document.querySelector</code>.</p>
+        <code>document.querySelector</code>.
+      </p>
 
       <p>The option of immediately invoked JS function expressions can be used for obtaining a namespace mechanism that
         is superior to using a plain namespace object, since it can be controlled which variables and methods are
@@ -877,7 +892,8 @@ numbers.<strong>forEach</strong>( function (n) {
         in the context of a class and, consequently, classes are not only used for implementing object types (or model
         classes), but also as containers for many other purposes in these languages. This is not the case in JavaScript
         where we have the freedom to use classes for implementing object types only, while keeping method libraries in
-        namespace objects.</p>
+        namespace objects.
+      </p>
 
       <p>Any code pattern for defining classes in JavaScript should satisfy five requirements. First of all, (1) it
         should allow to define a <em>class name</em>, a set of (instance-level) <strong><em> properties</em></strong>,
@@ -891,7 +907,8 @@ numbers.<strong>forEach</strong>( function (n) {
         (4) <strong><em>property</em></strong> <strong><em>inheritance </em></strong>and (5)
         <strong><em>method</em></strong> <strong><em>inheritance</em></strong>. In addition, it is desirable to have
         support for <em>multiple inheritance</em> and <em>multiple classifications</em>, for allowing objects to play
-        several roles at the same time by instantiating several role classes.</p>
+        several roles at the same time by instantiating several role classes.
+      </p>
 
       <p>There is no explicit class concept in JavaScript. Different code patterns for defining classes in JavaScript
         have been proposed and are being used in different frameworks. But they do often not satisfy the five
@@ -903,7 +920,8 @@ numbers.<strong>forEach</strong>( function (n) {
             <strong><em>prototype chain</em></strong> and allows to create new instances of a class with the help of the
             <code>new</code> operator. This is the classical approach recommended by Mozilla in their <a
               href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model"
-              target="_top">JavaScript Guide</a>.</p>
+              target="_top">JavaScript Guide</a>.
+          </p>
         </li>
         <li>
           <p>In the form of a <strong><em>factory</em></strong> object that uses the predefined
@@ -912,7 +930,8 @@ numbers.<strong>forEach</strong>( function (n) {
               href="http://chimera.labs.oreilly.com/books/1234000000262/ch03.html#fluentstyle_javascript"
               target="_top">Eric Elliott</a> has argued that factory-based classes are a viable alternative to
             constructor-based classes in JavaScript (in fact, he even condemns the use of classical inheritance with
-            constructor-based classes, throwing out the baby with the bath water).</p>
+            constructor-based classes, throwing out the baby with the bath water).
+          </p>
         </li>
       </ol>
 
@@ -1178,7 +1197,8 @@ Student.prototype.constructor = Student;</pre>
 
         <p>In this approach we define a JS object <code>Person</code> (actually representing a class) with a special
           <code>create</code> method that invokes the predefined <code>Object.create</code> method for creating objects
-          of type <code>Person</code>:</p>
+          of type <code>Person</code>:
+        </p>
 
         <pre>var <strong>Person</strong> = {
   typeName: "Person",
@@ -1229,7 +1249,8 @@ Student.prototype.constructor = Student;</pre>
 
         <p>Notice that each property declaration for an object created with <code>Object.create</code> has to include
           the 'descriptors' <code>writable: true</code> and <code>enumerable: true</code>, as in lines 5 and 7 of the
-          <code>Person</code> object definition above.</p>
+          <code>Person</code> object definition above.
+        </p>
 
         <p>In a general approach, like in the <a
             href="http://oxygen.informatik.tu-cottbus.de/webeng/JsFrontendApp/book/pt06.html">mODELcLASSjs</a> library
@@ -1265,14 +1286,16 @@ Student.prototype.constructor = Student;</pre>
         and domain name. For instance, <code>http://example.com</code> and <code>http://www.example.com</code> are
         different origins because they have different domain names, while <code>http://www.example.com</code> and
         <code>https://www.example.com</code> are different origins because of their different protocols (HTTP versus
-        HTTPS).</p>
+        HTTPS).
+      </p>
 
       <p>The Local Storage database managed by the browser and associated with an app (via its origin) is exposed as the
         built-in JavaScript object <code>localStorage</code> with the methods <code>getItem</code>,
         <code>setItem</code>, <code>removeItem</code> and <code>clear</code>. However, instead of invoking
         <code>getItem</code> and <code>setItem</code>, it is more convenient to handle <code>localStorage</code> as a
         map, writing to it by assigning a value to a key as in <code>localStorage["id"] = 2901465</code>, and retrieving
-        data by reading the map as in <code>var id = localStorage["id"]</code>.</p>
+        data by reading the map as in <code>var id = localStorage["id"]</code>.
+      </p>
 
       <p>The following example shows how to create an entity table and save its serialization to Local Storage:</p>
 
@@ -1293,7 +1316,8 @@ try {
       <p>Notice that we have used the predefined method <code>JSON.stringify</code> for serializing the JSON table
         <code>persons</code> into a string that is assigned as the value of the <code>localStorage</code> key
         "<code>personTable</code>". We can retrieve the table with the help of the predefined de-serialization method
-        <code>JSON.parse</code> in the following way:</p>
+        <code>JSON.parse</code> in the following way:
+      </p>
 
       <pre>var persons = {};
 try {
@@ -1319,7 +1343,8 @@ try {
           <p><a href="http://eloquentjavascript.net/" target="_top">Eloquent JavaScript</a>, by Marijn Haverbeke.</p>
         </li>
         <li>
-          <p><a href="../../../JsFrontendApp-Book/index.html">Building Front-End Web Apps with Plain JavaScript</a>, by Gerd
+          <p><a href="../../../JsFrontendApp-Book/index.html">Building Front-End Web Apps with Plain JavaScript</a>, by
+            Gerd
             Wagner</p>
         </li>
       </ul>
